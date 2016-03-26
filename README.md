@@ -1,4 +1,10 @@
-# Moodle REST client for NodeJS (BETA)
+Moodle REST client for NodeJS (BETA)
+===
+[![npm version](https://badge.fury.io/js/moodle-rest-client.svg)](http://badge.fury.io/js/moodle-rest-client)
+[![npm dependency status](https://david-dm.org/virgilioneto/moodle-rest-client.svg)](https://david-dm.org/virgilioneto/moodle-rest-client)
+[![Build Status](https://travis-ci.org/virgilioneto/moodle-rest-client.svg?branch=master)](https://travis-ci.org/virgilioneto/moodle-rest-client)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 
 ## Instalation
  ```
