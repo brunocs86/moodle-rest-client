@@ -5,6 +5,8 @@ Moodle REST client for NodeJS (BETA)
 [![Build Status](https://travis-ci.org/virgilioneto/moodle-rest-client.svg?branch=master)](https://travis-ci.org/virgilioneto/moodle-rest-client)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+## Information
+This package is in early development stage and ready for production yet. The code use some ES6 features like class
 
 ## Instalation
  ```
