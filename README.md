@@ -54,7 +54,7 @@ The method `client.send` expects three params:
 ```javascript
 client.send('core_user_get_users', 'criteria', [{key: 'id', value: 2}])
   .then((data) => {
-    //Do yout stuff if the result
+    //Handle the result
   })
   .catch((error) => {
     //Handle the request error
@@ -72,7 +72,7 @@ let data = [{
 }]
 client.send('core_user_create_users', 'criteria', [{key: 'id', value: 2}])
   .then((data) => {
-    //Do yout stuff if the result
+    //Handle the result
   })
   .catch((error) => {
     //Handle the request error
