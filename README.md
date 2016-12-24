@@ -5,38 +5,83 @@ Moodle REST client for NodeJS (BETA)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Information
-This package is in early development stage and ready for production yet. The code use some ES6 features like class
+Node.js module for Moodle Rest Service integration
 
-## Instalation
+## Setup
+
+### Npm
+```bash
+npm install moodle-rest-client --save
  ```
-    npm install moodle-rest-client --save
- ```
+
+### Yarn
+```bash
+yarn add moodle-rest-client
+```
  
 ## Usage
-    var Client = require('moodle-rest-client')(
-        {
-            host: 'yourmoodleurl.com',
-            token: 'moodleclienttokenhere'
-        }
-    );
-    
-    Client.User.create_users(
-        [
-            {
-                username: 'username',
-                password : 'password',
-                firstname : 'Firstname',
-                lastname : 'Lastname',
-                email : 'user@yourmoodleurl.com'
-            }
-        ]
-    )
-    .then((data) => {
-        //Handle result here.
-    })
-    .catch((err) => {
-        //Habdle error here
-    });
 
+### Instance
+```javascript
+const {MoodleRestClient} = require('moodle-rest-client')
+//Default use. Results in: http://your-moodle-url.com
+const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token')
+//Using https. Results in: http://your-moodle-url.com
+const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
+    {protocol: 'https'}
+)
+//Using diferent port. Results in: http://your-moodle-url.com:8080
+const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
+    {port: 8080}
+)
+//Using subdirectory. Results in: http://your-moodle-url.com/moodle
+const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
+    {subdirectory: 'moodle'}
+)
+//Using all together. Results in: https://your-moodle-url.com:8080/moodle
+const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
+    {protocol: 'https', port: 8080, subdirectory: 'moodle'}
+)
+```
+
+### Request
+The method `client.send` expects three params:
+* **wsFunction**: Moodle webservice function name
+* **Key**: Moodle webservice function  parameter key
+* **Value**: Moodle webservice function parameter value
+
+#### Get user sample
+```javascript
+client.send('core_user_get_users', 'criteria', [{key: 'id', value: 2}])
+  .then((data) => {
+    //Do yout stuff if the result
+  })
+  .catch((error) => {
+    //Handle the request error
+  })
+```
+
+#### Create user sample
+```javascript
+let data = [{
+    username: 'username',
+    password: 'Strong@pass123',
+    firstname: 'Firstname',
+    lastname: 'Lastname',
+    email: 'user@provider.com'
+}]
+client.send('core_user_create_users', 'criteria', [{key: 'id', value: 2}])
+  .then((data) => {
+    //Do yout stuff if the result
+  })
+  .catch((error) => {
+    //Handle the request error
+  })
+```
 ## Reference
-You can find moodle service documentation on http://yourmoodleurl.com/admin/webservice/documentation.php
+* [Module API documentation](https://virgilioneto.github.io/moodle-rest-client)
+* [Moodle webservice overview](http://your-moodle-url.com/admin/settings.php?section=webservicesoverview)
+* [Moodle webservice documentation](http://your-moodle-url.com/admin/webservice/documentation.php)
+* [Moodle webservice protocols](http://your-moodle-url.com/admin/settings.php?section=webserviceprotocols)
+* [Moodle webservice external functions](http://your-moodle-url.com/admin/settings.php?section=externalservices)
+* [Moodle webservice token configuration](http://your-moodle-url.com/admin/settings.php?section=webservicetokens)
