@@ -1,7 +1,7 @@
 {
   "name": "moodle-rest-client",
-  "version": "0.0.5",
-  "description": "Moodle REST Client (BETA)",
+  "version": "0.1.0",
+  "description": "Moodle REST Client",
   "main": "index.js",
   "scripts": {
     "doc": "node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -R README.md -r ./lib"
