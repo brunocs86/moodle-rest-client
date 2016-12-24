@@ -1,4 +1,4 @@
-Moodle REST client for NodeJS (BETA)
+Moodle REST client for NodeJS
 ===
 [![npm version](https://badge.fury.io/js/moodle-rest-client.svg)](http://badge.fury.io/js/moodle-rest-client)
 [![npm dependency status](https://david-dm.org/virgilioneto/moodle-rest-client.svg)](https://david-dm.org/virgilioneto/moodle-rest-client)
