@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Index</title>
+	<title>Documentation Classes</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,86 +65,95 @@
 		<div id="main">
 			
 
+	<h1 class="page-title">Classes</h1>
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
 	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
 	
 
 
 
-
-
-
-
-
-
-
-
-	
 	
 
+	
+
+	
+
+	
+</dl>
 
 
+        
+    
+    </div>
 
+    
 
-    <section class="readme-section">
-        <article><h1>Moodle REST client for NodeJS (BETA)</h1><p><a href="http://badge.fury.io/js/moodle-rest-client"><img src="https://badge.fury.io/js/moodle-rest-client.svg" alt="npm version"></a>
-<a href="https://david-dm.org/virgilioneto/moodle-rest-client"><img src="https://david-dm.org/virgilioneto/moodle-rest-client.svg" alt="npm dependency status"></a>
-<a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="js-standard-style"></a></p>
-<h2>Information</h2><p>Node.js module for Moodle Rest Service integration</p>
-<h2>Setup</h2><h3>Npm</h3><pre class="prettyprint source lang-bash"><code>npm install moodle-rest-client --save</code></pre><h3>Yarn</h3><pre class="prettyprint source lang-bash"><code>yarn add moodle-rest-client</code></pre><h2>Usage</h2><h3>Instance</h3><pre class="prettyprint source lang-javascript"><code>const {MoodleRestClient} = require('moodle-rest-client')
-//Default use. Results in: http://your-moodle-url.com
-const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token')
-//Using https. Results in: http://your-moodle-url.com
-const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
-    {protocol: 'https'}
-)
-//Using diferent port. Results in: http://your-moodle-url.com:8080
-const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
-    {port: 8080}
-)
-//Using subdirectory. Results in: http://your-moodle-url.com/moodle
-const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
-    {subdirectory: 'moodle'}
-)
-//Using all together. Results in: https://your-moodle-url.com:8080/moodle
-const client = new MoodleRestClient('your-moodle-url.com', 'your-moodle-token',
-    {protocol: 'https', port: 8080, subdirectory: 'moodle'}
-)</code></pre><h3>Request</h3><p>The method <code>client.send</code> expects three params:</p>
-<ul>
-<li><strong>wsFunction</strong>: Moodle webservice function name</li>
-<li><strong>Key</strong>: Moodle webservice function  parameter key</li>
-<li><strong>Value</strong>: Moodle webservice function parameter value</li>
-</ul>
-<h4>Get user sample</h4><pre class="prettyprint source lang-javascript"><code>client.send('core_user_get_users', 'criteria', [{key: 'id', value: 2}])
-  .then((data) => {
-    //Handle the result
-  })
-  .catch((error) => {
-    //Handle the request error
-  })</code></pre><h4>Create user sample</h4><pre class="prettyprint source lang-javascript"><code>let data = [{
-    username: 'username',
-    password: 'Strong@pass123',
-    firstname: 'Firstname',
-    lastname: 'Lastname',
-    email: 'user@provider.com'
-}]
-client.send('core_user_create_users', 'criteria', [{key: 'id', value: 2}])
-  .then((data) => {
-    //Handle the result
-  })
-  .catch((error) => {
-    //Handle the request error
-  })</code></pre><h2>Reference</h2><ul>
-<li><a href="https://virgilioneto.github.io/moodle-rest-client">Module API documentation</a></li>
-<li><a href="http://your-moodle-url.com/admin/settings.php?section=webservicesoverview">Moodle webservice overview</a></li>
-<li><a href="http://your-moodle-url.com/admin/webservice/documentation.php">Moodle webservice documentation</a></li>
-<li><a href="http://your-moodle-url.com/admin/settings.php?section=webserviceprotocols">Moodle webservice protocols</a></li>
-<li><a href="http://your-moodle-url.com/admin/settings.php?section=externalservices">Moodle webservice external functions</a></li>
-<li><a href="http://your-moodle-url.com/admin/settings.php?section=webservicetokens">Moodle webservice token configuration</a></li>
-</ul></article>
-    </section>
+    
 
+    
+        <h3 class="subsection-title">Classes</h3>
 
+        <dl>
+            <dt><a href="MoodleRestClient.html">MoodleRestClient</a></dt>
+            <dd></dd>
+        </dl>
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
